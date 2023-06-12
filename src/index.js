@@ -2,6 +2,13 @@ import _ from 'lodash';
 import './style.css';
 import Icon from './icon.png';
 
+function componentDefault() {
+  const element = document.createElement('div');
+
+  // Lodash, now imported
+  element.innerHTML = _.join(['I', 'am', 'default'], ' ');
+  return element;
+}
 
 function component() {
   const element = document.createElement('div');
@@ -18,4 +25,5 @@ function component() {
   return element;
 }
 
+document.body.appendChild(componentDefault());
 document.body.appendChild(component());
