@@ -8,6 +8,10 @@ module.exports = {
 	  print: './src/print.js',
   },
   devtool: 'inline-source-map',
+  // localhost:8080
+  devServer: {
+    static: './dist',
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Development',
@@ -17,5 +21,9 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+  },
+  // we have more than one entrypoint on a single HTML page
+  optimization: {
+    runtimeChunk: 'single',
   },
 };
