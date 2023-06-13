@@ -21,6 +21,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/',
   },
   // we have more than one entrypoint on a single HTML page
   optimization: {
