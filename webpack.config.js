@@ -4,15 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-	  index: {
-      import : './src/index.js',
-      dependOn: 'shared',
-    },
-    another: {
-      import: './src/another-module.js',
-      dependOn: 'shared',
-    },
-    shared: 'lodash',
+	  index: './src/index.js',
   },
   devtool: 'inline-source-map',
   // localhost:8080
@@ -31,7 +23,7 @@ module.exports = {
     publicPath: '/',
   },
   // we have more than one entrypoint on a single HTML page
-  optimization: {
-    runtimeChunk: 'single',
-  },
+  // optimization: {
+  //   runtimeChunk: 'single',
+  // },
 };
